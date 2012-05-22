@@ -91,13 +91,17 @@
 
 媒体资源的编码格式，适用于 MediaObject 及其派生类。
 
+#### *\[itemprop=image]
+
+缩略图地址，适用于任何类型的媒体。
+
 #### *\[itemprop=thumbnailUrl]
 
 缩略图地址，适用于任何类型的媒体。
 
 #### *\[itemprop=thumbnail]
 
-缩略图对象，适用于 ImageObject 和 VideoObject。
+缩略图对象，适用于 ImageObject 和 VideoObject。豌豆荚只读取里面的 `*\[itemprop=image]` 属性。
 
 #### *\[itemprop=byArtist]
 
