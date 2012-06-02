@@ -26,16 +26,16 @@
 
 名称。会显示在资源管理界面和下载任务管理器。
 
-如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `name` 属性时，该属性从同一个 `itemscope` 内的 `*\[itemprop=name]` 元素上获取。
+如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `name` 属性时，该属性从同一个 `itemscope` 内的 `*[itemprop=name]` 元素上获取。
 
 ### image
 
 图标。会显示在资源管理界面和下载任务管理器。
 
-如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `image` 属性时，该属性从同一个 `itemscope` 内的 `*\[itemprop=image]` 或 `*\[itemprop=thumbnailUrl] *\[itemprop=image]` 或 `*\[itemprop=thumbnail]` 元素上获取。
+如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `image` 属性时，该属性从同一个 `itemscope` 内的 `*[itemprop=image]` 或 `*[itemprop=thumbnailUrl] *[itemprop=image]` 或 `*[itemprop=thumbnail]` 元素上获取。
 
 ### size
 
 文件体积。文件在下载过程中如果提供了 content-length 属性，则以 content-length 属性为准。文嘉下载后，以实际存储的文件体积为准。会显示在资源管理界面和下载任务管理器。
 
-如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `size` 属性时，该属性从同一个 `itemscope` 内的 `*\[itemprop=fileSize]` 或 `*\[itemprop=contentSize]` 元素上获取。
+如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `size` 属性时，该属性从同一个 `itemscope` 内的 `*[itemprop=fileSize]` 或 `*[itemprop=contentSize]` 元素上获取。
