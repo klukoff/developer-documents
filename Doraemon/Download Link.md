@@ -32,7 +32,7 @@
 
 图标。会显示在资源管理界面和下载任务管理器。
 
-如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `image` 属性时，该属性从同一个 `itemscope` 内的 `*[itemprop=image]` 或 `*[itemprop=thumbnailUrl] *[itemprop=image]` 或 `*[itemprop=thumbnail]` 元素上获取。
+如果下载链接所在的网页上使用了 micro-format，在锚点不提供 `image` 属性时，该属性从同一个 `itemscope` 内的 `*[itemprop=image]` 或 `*[itemprop=thumbnail] *[itemprop=image]` 或 `*[itemprop=thumbnailUrl]` 元素上获取。
 
 ### size
 
