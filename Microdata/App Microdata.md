@@ -1,4 +1,4 @@
-# App Micro-Format
+# App Microdata
 
 ## 概述
 

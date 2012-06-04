@@ -1,4 +1,4 @@
-# Media Micro-Format
+# Media Microdata
 
 ## 概述
 
