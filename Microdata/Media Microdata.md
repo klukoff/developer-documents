@@ -1,18 +1,16 @@
-# Media Microdata
+# Media Microdata [English Version]
 
-## 概述
+The primary purpose of the Media Microdata format is to let SnapPea's browser recognize when a block of HTML description on a third-party site is a media file (text, picture, video, music). When a user wants to download, SnapPea can provide better data to the user. 
 
-媒体微格式的主要作用是让豌豆荚的浏览器能够识别出第三方页面上的一段 HTML 描述的是一个媒体文件（文本、图片、音频、视频），在用户想要下载时为用户提供更丰富的信息。
+## Reference File
 
-## 引用文件
-
-所有使用此微格式的页面都引用同一个 JavaScript 文件。
+All pages that use microdata all reference one JavaScript file.
 
 	<script type="text/javascript" src="http://cdn-prefix.wandoujia.com/path-prefix/micro-format.js">
 
-## 微格式
+## Microdata format
 
-豌豆荚对符合以下类型的微格式进行处理：
+SnapPea can handle the the following types of media:
 
 * [Article](http://schema.org/Article)
 	* [BlogPosting](http://schema.org/BlogPosting)
@@ -24,11 +22,11 @@
 	* [MusicVideoObject](http://schema.org/MusicVideoObject)
 	* [VideoObject](http://schema.org/VideoObject)
 
-对于 Article 及其派生类，豌豆荚会尝试在页面上抽取文本提供给用户下载。对于 MediaObject 及其派生类，豌豆荚会尝试在页面上寻找链接，将链接目标提供给用户下载。
+For Article and its derivatives, SnapPea will try to extract all text and make it available for download. For MediaObject and its derivatives, SnapPea will try to detect the link, and give this target to the user for download.
 
 ### Article
 
-对于 Article 及其派生类来说，只有 `articleBody` 属性是必须的，其他属性可以为豌豆荚提供更多信息。
+For Article and its derivatives, only the `articleBody` property is required, other properties are optional for SnapPea. 
 
 	<div itemscope itemtype="http://schema.org/Article">
 		<span itemprop="name">My speech</span>
@@ -42,11 +40,11 @@
 
 #### *\[itemprop=articleBody]
 
-文章正文内容。
+Body text of article.
 
 ### MediaObject
 
-对于 MediaObject 及其派生类来说，只有 `contentUrl` 属性是必须的，其他属性可以为豌豆荚提供更多信息。
+For MediaObject and its derivatives, only `contentUrl` is required,  other properties are optional for SnapPea. 
 
 	<div itemscope itemtype="http://schema.org/AudioObject">
 		<span itemprop="name">12oclock_girona.mp3</span>
@@ -71,38 +69,39 @@
 
 #### *\[itemprop=contentUrl]
 
-媒体文件的下载（播放）地址。
+Download URL (or broadcast URL) for the media file. 
 
-### 其它
+### Other
 
-增加其他属性可以为豌豆荚提供更丰富的展示信息。将上述类型作为输入嵌入到其他类型当中，其他类型的属性也能为豌豆荚提供更丰富的信息。例如将 VideoObject 嵌入到 Movie 中，豌豆荚可以通过 Movie 的属性获取到关于 VideoObject 的更多信息。
+Adding other properties will let SnapPea display richer data. The above-mentioned types can be embedded into other types. For example, if VideoObject is embedded in Movie, SnapPea will use the Movie type to get richer data about VideoObject. 
 
-豌豆荚具体支持的类型和信息如下：
+SnapPea supports the following types and data:
 
 #### *\[itemprop=name]
 
-媒体资源的名称，适用于任何类型的媒体。
+Name of the media file, applies to all types of media.
 
 #### *\[itemprop=contentSize]
 
-媒体资源的下载文件体积，适用于 MediaObject 及其派生类。
+Size of the media file for download, applies to MediaObject and its derivatives.
 
 #### *\[itemprop=encodingFormat]
 
-媒体资源的编码格式，适用于 MediaObject 及其派生类。
+Encoding format of the media file, applies to MediaObject and its derivatives.
 
 #### *\[itemprop=image]
 
-缩略图地址，适用于任何类型的媒体。
+URL of thumbnail image, applies to all types of media.
 
 #### *\[itemprop=thumbnailUrl]
 
-缩略图地址，适用于任何类型的媒体。
+URL of thumbnail image, applies to all types of media.
 
 #### *\[itemprop=thumbnail]
 
-缩略图对象，适用于 ImageObject 和 VideoObject。豌豆荚只读取里面的 `*\[itemprop=image]` 属性。
+The target for a thumbnail, applies to ImageObject and VideoObject. SnapPea will only read the included `*\[itemprop=image]` property.  
 
 #### *\[itemprop=byArtist]
 
-表演者，适用于通过 encoding 包含了 MediaObject 及其派生类的 MusicRecording。
+Artist name, applies to all encodings, including MediaObject and its derivative MusicRecording. 
+

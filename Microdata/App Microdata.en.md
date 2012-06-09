@@ -2,10 +2,10 @@
 
 ## description
 
-The purpose of app microdata is to let SnapPea and other search engines know that a block of HTML description is an app. When a user wants to download or update an app, the service can provide the name, version, icon, description and other data. The uses of this include:
+The primary purpose of app microdata is to let SnapPea recognize when a block of HTML description is an app. When a user wants to download or update an app, SnapPea can detect the name, version, icon, description and other data. The uses of this include:
 
-*To provide data for the "1-click download" feature
-*To let search spiders recognize the data
+* To let SnapPea's spiders recognize the data
+* To provide data for the "1-click download" feature
 
 ## Microdata format
 
@@ -23,7 +23,7 @@ All app-related operations use a `*[itemscope]` tag, which includes a `class` pr
 
 ### class
 
-If `class` includes `snp-app-download` type, the SnapPea client will use `packageName` and `softwareVersion` to check if the user already has a previous version of the app installed. If yes, then `snp-app-download` will be updated to `snp-app-update` (update available) or `snp-app-downloaded` (already download)
+If `class` includes `snp-app-download` type, the SnapPea client will use `packageName` and `softwareVersion` to check if the user already has a previous version of the app installed. If yes, then `snp-app-download` will be updated to `snp-app-update` (update available) or `snp-app-downloaded` (already downloaded)
 
 ### *\[itemprop=name]
 
@@ -67,4 +67,4 @@ App category.
 
 ### Other
 
-Aside from the above-mentioned properties, please consult the following document for additional custom properties [Schema.org Documentation](http://schema.org/SoftwareApplication).
+Aside from the above-mentioned properties, please consult the following document for additional custom properties: [Schema.org Documentation](http://schema.org/SoftwareApplication).
