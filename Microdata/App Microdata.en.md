@@ -1,13 +1,13 @@
-# App Microdata English
+# App Microdata [English Version]
 
-## 概述
+## description
 
-应用微格式的主要作用是让豌豆荚和其它搜索引擎能够识别出网页上的一段 HTML 描述的是一个应用，在用户想要下载和升级应用的时候，为用户提供名称、版本、图标、描述等更丰富的信息。此机制将来会用于：
+The purpose of app microdata is to let SnapPea and other search engines know that a block of HTML description is an app. When a user wants to download or update an app, the service can provide the name, version, icon, description and other data. The uses of this include:
 
-* 用于一键安装中传递下载相关信息
-* 用于搜索爬虫抓取数据时进行识别
+*To provide data for the "1-click download" feature
+*To let search spiders recognize the data
 
-## 微格式
+## Microdata format
 
 	<div itemscope itemtype="http://schema.org/SoftwareApplication" class="download">
 		<img itemprop="image" src="https://ssl.gstatic.com/android/market/com.zeptolab.ctr.paid/hi-124-11" />
@@ -19,11 +19,11 @@
 		<a itemprop="downloadURL" href="">Download</a> (<span itemprop="fileSize">18,123,456</span>)
 	</div>
 
-所有跟应用相关的操作都使用 `*[itemscope]` 标签，具体信息由 `class` 属性及里面的 `*[itemprop]` 元素给出。
+All app-related operations use a `*[itemscope]` tag, which includes a `class` property and an `*[itemprop]` element.
 
 ### class
 
-如果 `class` 包含了 `snp-app-download` 类，豌豆荚客户端将会通过 `packageName` 和 `softwareVersion` 检测用户是否已经拥有此应用的过往版本或最新版本。如果是的话，则会将 `snp-app-download` 更新为 `snp-app-update`（代表可更新）或 `snp-app-downloaded`（代表已下载）。
+If `class` includes `snp-app-download` type, the SnapPea client will use `packageName` and `softwareVersion` to check if the user already has a previous version of the app installed. If yes, then `snp-app-download` will be updated to `snp-app-update` (update available) or `snp-app-downloaded` (already download)
 
 ### *\[itemprop=name]
 
