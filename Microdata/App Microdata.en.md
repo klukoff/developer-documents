@@ -27,44 +27,44 @@ If `class` includes `snp-app-download` type, the SnapPea client will use `packag
 
 ### *\[itemprop=name]
 
-直接展示给用户看的应用名称。
+The app name displayed to the user.
 
 ### *\[itemprop=packageName]
 
-应用包名称。
+Name of the app package.
 
 ### *\[itemprop=softwareVersion]
 
-应用版本号。
+App version number.
 
 ### *\[itemprop=fileMd5]
 
-应用 apk 文件的 md5 摘要信息。
+App APK file's md5 data.
 
 ### *\[itemprop=url]
 
-应用详情页地址。
+URL of the page with the app's detailed info.
 
 ### *\[itemprop=downloadUrl]
 
-应用 apk 文件下载地址。
+Download URL for the app's APK file 
 
 ### *\[itemprop=description]
 
-直接展示给用户看的应用描述。
+The app description displayed to the user.
 
 ### *\[itemprop=image]
 
-直接展示给用户看的应用图标。
+The app icon displayed to the user.
 
 ### *\[itemprop=fileSize]
 
-应用 apk 文件体积，用按字节计算的整数表示。
+Size of the app's APK file, provided in number of bytes.
 
 ### *\[applicationCategory]
 
-应用类别。
+App category.
 
-### 其他
+### Other
 
-除去上述必要的属性外，其它自定义属性可以参考 [Schema.org 的文档](http://schema.org/SoftwareApplication)。
+Aside from the above-mentioned properties, please consult the following document for additional custom properties [Schema.org Documentation](http://schema.org/SoftwareApplication).
