@@ -1,12 +1,6 @@
 # Media Microdata [English Version]
 
-The primary purpose of the Media Microdata format is to let SnapPea's browser recognize when a block of HTML description on a third-party site is a media file (text, picture, video, music). When a user wants to download, SnapPea can provide better data to the user. 
-
-## Reference File
-
-All pages that use microdata all reference one JavaScript file.
-
-	<script type="text/javascript" src="http://cdn-prefix.wandoujia.com/path-prefix/micro-format.js">
+The primary purpose of the Media Microdata format is to let SnapPea's browser recognize when a block of HTML represents meta-data (contextual data) of a media file (text, picture, video, music). That way SnapPea can provide better contextual information to the user.
 
 ## Microdata format
 

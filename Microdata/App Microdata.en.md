@@ -19,7 +19,7 @@ The primary purpose of app microdata is to let SnapPea recognize when a block of
 		<a itemprop="downloadURL" href="">Download</a> (<span itemprop="fileSize">18,123,456</span>)
 	</div>
 
-All app-related operations use a `*[itemscope]` tag, which includes a `class` property and an `*[itemprop]` element.
+All app-related operations use a `*[itemscope]` tag, which includes a class property and several *[itemprop] elements.
 
 ### class
 
